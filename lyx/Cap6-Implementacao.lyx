@@ -1,0 +1,1122 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Implementação
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Implementação"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Implementação} 
+\backslash
+rhead{
+\backslash
+thepage} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste capítulo do projeto de engenharia apresentamos os códigos fonte que
+ foram desenvolvidos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[ISO]C++,numbers=left, numberstyle=
+\backslash
+tiny,  stepnumber=1, numbersep=1pt, firstnumber=last , 
+\end_layout
+
+\begin_layout Plain Layout
+
+emph={alignas , alignof , and , and_eq, asm , auto, bitand, bitor, bool,
+ break, case, catch, char, char16_t, char32_t, class, compl, const, constexpr,
+ const_cast, continue, decltype , default, delete, do, double, dynamic_cast,
+ else, enum, explicit, export, extern, false, float, for, friend, goto,
+ if, inline ,int ,long ,mutable ,namespace ,new ,noexcept , not not_eq nullptr
+ , operator ,or ,or_eq, private ,protected ,public ,register ,reinterpret_cast
+ ,return ,short ,signed ,sizeof ,static ,static_assert, static_cast, struct
+ ,switch ,template ,this ,thread_local , throw ,true ,try ,typedef ,typeid
+ ,typename ,union ,unsigned ,using, virtual ,void ,volatile ,wchar_t, while
+ ,xor ,xor_eqv, override, final} , 
+\end_layout
+
+\begin_layout Plain Layout
+
+emphstyle={
+\backslash
+color{red}}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+emph={[2]array , dynarray ,vector , deque, list, forward_list, set, map,
+ multiset, multimap, unordered_set, unordered_map, unordered_multiset,unordered_
+multimap, stack, queue, priority_queue, pair, tuple, string, wstring, u16string,
+u32string, valarray,piecewise_construct_t , piecewise_construct , integer_sequen
+ce, swap, exchange , forward, move , move_if_noexcept, declval, hash, optional,
+ in_place_t, in_place, nullopt_t , nullopt , bad_optional_access  } , 
+\end_layout
+
+\begin_layout Plain Layout
+
+emphstyle={[2]
+\backslash
+color{blue}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Código fonte
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Codigo-fonte"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Implementação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se a seguir um conjunto de classes (arquivos .h e .cpp) além do
+ programa 
+\family typewriter
+main
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CSimulador-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CSimulador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CSimulador.h}, label={CS
+imulador-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSimulador.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CSimulador-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CSimulador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CSimulador.cpp},
+ label={CSimulador-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSimulador.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CPerfil-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CPerfil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CPerfil.h}, label={CPerf
+il-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPerfil.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CPerfil-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CPerfil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CPerfil.cpp},
+ label={CPerfil-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPerfil.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CProfundidade-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CProfundidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CProfundidade.h},
+ label={CProfundidade-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CProfundidade.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CProfundidade-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CProfundidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CProfundidade.cpp},
+ label={CProfundidade-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CProfundidade.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CGamaRay-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CGamaRay.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CGamaRay.h}, label={CGam
+aRay-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CGamaRay.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CGamaRay-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CGamaRay.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CGamaRay.cpp},
+ label={CGamaRay-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CGamaRay.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CResistividade-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CResistividade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CResistividade.h},
+ label={CResistividade-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CResistividade.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CResistividade-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CResistividade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CResistividade.cpp},
+ label={CResistividade-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CResistividade.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CDensidade-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CDensidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CDensidade.h}, label={CD
+ensidade-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CDensidade.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CDensidade-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CDensidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CDensidade.cpp},
+ label={CDensidade-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CDensidade.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CLitologia-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CLitologia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CLitologia.h}, label={CL
+itologia-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CLitologia.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CLitologia-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CLitologia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CLitologia.cpp},
+ label={CLitologia-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CLitologia.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CArgilosidade-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CArgilosidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CArgilosidade.h},
+ label={CArgilosidade-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CArgilosidade.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CArgilosidade-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CArgilosidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CArgilosidade.cpp},
+ label={CArgilosidade-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CArgilosidade.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CPorosidade-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CPorosidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CPorosidade.h},
+ label={CPorosidade-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPorosidade.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CPorosidade-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CPorosidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CPorosidade.cpp},
+ label={CPorosidade-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPorosidade.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CSaturacaoArchieNormal-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CSaturacaoArchieNormal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CSaturacaoArchieNormal.h
+}, label={CSaturacaoArchieNormal-h},extendedchars=true,breaklines=true,basicstyl
+e=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSaturacaoArchieNormal.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CSaturacaoArchieNormal-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CSaturacaoArchieNormal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CSaturacaoArchieNor
+mal.cpp}, label={CSaturacaoArchieNormal-cpp},extendedchars=true,breaklines=true,b
+asicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSaturacaoArchieNormal.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CSaturacaoArchieModificada-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe CSaturacaoArchieModificada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CSaturacaoArchieModific
+ada.h}, label={CSaturacaoArchieModificada-h},extendedchars=true,breaklines=true,b
+asicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSaturacaoArchieModificada.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{CSaturacaoArchieModificada-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe CSaturacaoArchieModificada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CSaturacaoArchieMod
+ificadal.cpp}, label={CSaturacaoArchieModificada-cpp},extendedchars=true,breaklin
+es=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSaturacaoArchieModificada.cpp}
+\end_layout
+
+\end_inset
+
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{main-cpp}
+\end_layout
+
+\end_inset
+
+ o programa que usa a classe main.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={
+\end_layout
+
+\begin_layout Plain Layout
+
+Arquivo de implementação da função 
+\backslash
+texttt{main()}.}, label={main-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/main.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

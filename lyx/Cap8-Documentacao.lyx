@@ -1,0 +1,679 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Documentação 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Documentação} 
+\backslash
+rhead{
+\backslash
+thepage} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A presente documentação refere-se ao uso do simulador SEPP.
+ Esta documentação tem o formato de uma apostila que explica passo a passo
+ como usar o software.
+ 
+\end_layout
+
+\begin_layout Section
+Documentação do usuário
+\end_layout
+
+\begin_layout Standard
+Descreve-se aqui o manual do usuário, um guia que explica, passo a passo
+ a forma de instalação e uso do software desenvolvido.
+\end_layout
+
+\begin_layout Subsection
+Como rodar o software
+\end_layout
+
+\begin_layout Standard
+Abra o terminal, vá para o diretório onde está o código, compile o programa
+ e, depois, execute.
+ Logo após executar, siga os seguintes passos:
+\end_layout
+
+\begin_layout Enumerate
+Entre com o nome do arquivo que contém os dados da perfilagem (com extensão
+ .dat);
+\end_layout
+
+\begin_layout Enumerate
+Entre com a opção desejada:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Argilosidade -- opção 1;
+\end_layout
+
+\begin_layout Enumerate
+Porosidade -- opção 2;
+\end_layout
+
+\begin_layout Enumerate
+Saturação -- opção 3;
+\end_layout
+
+\begin_layout Enumerate
+Ver litologia -- opção 4;
+\end_layout
+
+\begin_layout Enumerate
+Plotar perfis -- opção 5;
+\end_layout
+
+\begin_layout Enumerate
+Sair do programa -- opção 0;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Caso entre com a opção 1, escolha a opção referente ao tipo de rocha:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para rocha consolidada -- opção 1;
+\end_layout
+
+\begin_layout Enumerate
+Para rocha não consolidada -- opção 2;
+\end_layout
+
+\begin_layout Enumerate
+Fórmula que não considera o grau de consolidação -- opção 3;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Após isso o resultado será mostrado em forma de gráfico;
+\end_layout
+
+\begin_layout Enumerate
+Caso entre com a opção 2, o resultado da porosidade será plotado em forma
+ de gráfico;
+\end_layout
+
+\begin_layout Enumerate
+Caso entre com a opção 3, escolha a opção referente ao tipo de fórmula:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Saturação de Archie -- opção 1;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+informe o coeficiente de tortuosidade (
+\begin_inset Formula $a$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Enumerate
+informe o coeficiente de cimentação (
+\begin_inset Formula $m$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Enumerate
+informe o coeficiente de saturação (
+\begin_inset Formula $n$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Enumerate
+informe a resistividade da água (
+\begin_inset Formula $rw$
+\end_inset
+
+);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Saturação de Archie com argilosidade -- opção 2;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+informar o tipo da rocha para calcular a argilosidade;
+\end_layout
+
+\begin_layout Enumerate
+além de informar os coeficientes 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+ e 
+\begin_inset Formula $rw$
+\end_inset
+
+, é necessário informar, também, a resistividade média da argila (
+\begin_inset Formula $rsh$
+\end_inset
+
+);
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Caso entre com a opção 4 o gráfico será mostrado indicando, com cores diferentes
+, a região de arenito e folhelho;
+\end_layout
+
+\begin_layout Enumerate
+Caso entre com a opção 5 aparecerão três graficos referentes ao perfis de
+ Radiação Gama, Resistividade e Densidade;
+\end_layout
+
+\begin_layout Enumerate
+Caso entre com a opção 0 o software será encerrado.
+\end_layout
+
+\begin_layout Section
+Documentação para desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Apresenta-se nesta seção a documentação para o desenvolvedor, isto é, informaçõe
+s para usuários que queiram modificar, aperfeiçoar ou ampliar este software.
+\end_layout
+
+\begin_layout Subsection
+Dependências
+\end_layout
+
+\begin_layout Standard
+Para compilar o software é necessário atender as seguintes dependências:
+ 
+\end_layout
+
+\begin_layout Itemize
+No sistema operacional GNU/Linux:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instalar o compilador g++ da GNU disponível em 
+\begin_inset Formula $http://gcc.gnu.org$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para instalar no GNU/Linux use o comando: yum install gcc.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+No sistema operacional Windows: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instalar um compilador apropriado.
+ 
+\end_layout
+
+\begin_layout Itemize
+Recomenda-se o Dev C++ disponível em 
+\begin_inset Formula $http://dev-c.softonic.com.br/$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+O software gnuplot, deve estar instalado.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gnuplot está disponível no endereço 
+\begin_inset Formula $http://www.gnuplot.info/$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+É possível que haja necessidade de setar o caminho para execução do gnuplot.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+O programa depende da existência de um arquivo de dados (formato .dat), Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Exemplo-do-arquivo"
+
+\end_inset
+
+, para preencher os vetores dos perfis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/dados-poco.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo do arquivo de dados 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Exemplo-do-arquivo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Documentação usando doxygen
+\end_layout
+
+\begin_layout Standard
+A documentação do código do simulador desenvolvido foi realizada usando
+ padrão JAVADOC, através do software doxygen que lê o arquivos com os códigos
+ (*.h e *.cpp) e gera uma documentação útil e de fácil navegação no formato
+ html.
+ Segue exemplo da documentação gerada, Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Documentação-do-projeto"
+
+\end_inset
+
+ , e de alguns diagramas gerados pelo software , Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-Relacionamento"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-heranca"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/Captura de tela de 2016-01-28 15_02_03.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Documentação do projeto gerada pelo doxygen 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Documentação-do-projeto"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/classGnuplot_a7654b86e3873aec4c5101abb466fe4ab_icgraph.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama gerado pelo doxygen: Relacionamento entre as classes CSimulador
+ e CGnuplot 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-Relacionamento"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/classCPerfil.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama gerado pelo doxygen: Herança entre as classes 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-heranca"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Referências Bibliográficas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[1\right]$
+\end_inset
+
+NERY, G.G.
+ PERFILAGEM GEOFÍSICA.
+ Salvador.
+ 2004.
+ Disponível em: http://www.geraldogirao.com/ .
+ Acesso em 22 de Julho de 2013.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[2\right]$
+\end_inset
+
+RIDER, M.
+ The Geological Interpretation of Well Logs.
+ 2 ed.
+ Scotland.
+ Rider- French Consulting Ltd, Sutherland.
+ 2002.
+ p280.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[3\right]$
+\end_inset
+
+STEVANATO, A.C.R.S.
+ Análise Petrofisica de Reservatórios.
+ Campinas.
+ 2011.
+ Graduação em Geologia.
+ Universidade Estadual de Campinas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[4\right]$
+\end_inset
+
+THOMAS, J.E.
+ Fundamentos de Engenharia de Petróleo.
+ Rio de Janeiro.
+ Editora Interciência.
+ 2001.
+ p.271.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[5\right]$
+\end_inset
+
+UMBRELLO, Editor de diagramas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[6\right]$
+\end_inset
+
+EDITOR DE DIAGRAMAS DIA.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[7\right]$
+\end_inset
+
+KATE, Editor de texto.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[8\right]$
+\end_inset
+
+DOXYGEN, Gerador de documentação.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[9\right]$
+\end_inset
+
+GNUPLOT, Gerador de gráficos.
+\end_layout
+
+\end_body
+\end_document
